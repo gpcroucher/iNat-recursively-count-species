@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>How many species are in this taxon?</h1>
+    <form id="name-form">
+      <label for="taxon-name-input">Taxon Name:</label>
+      <input type="text" name="taxonName" id="taxon-name-input" />
+      <br />
+      <label for="kingdom-input">Which kingdom?</label>
+      <select name="kingdom" id="kingdom-input">
+        <option value="">Choose a kingdom:</option>
+        <option value="Animals">Animals</option>
+        <option value="Plants">Plants</option>
+        <option value="Fungi">Fungi</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <p>or:</p>
+    <form id="id-form">
+      <label for="taxon-id-input">Taxon ID:</label>
+      <input type="text" name="taxonID" id="taxon-id-input" />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="brief-output"></p>
+    <div id="full-output">
+      <ol id="root-taxon"></ol>
+    </div>
+  </body>
+</html>
