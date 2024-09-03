@@ -1,3 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
 .group-name {
   font-weight: bold;
+}
+
+ol > li {
+  margin-left: 3svw;
+}
+ol > ol {
+  padding-left: 3svw;
+}
+div > ol > ol {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Trebuchet MS", "Tahoma", sans-serif;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
 }
