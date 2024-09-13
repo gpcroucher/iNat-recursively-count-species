@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "vite": "^5.4.5"
+  },
+  "name": "inat-recursively-count-species",
+  "version": "1.0.0",
+  "description": "displays a list of all child taxa and their child taxa and so on all the way down to species when given either an iNaturalist taxon ID or a taxon name and kingdom",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -9,7 +9,7 @@ IDForm.addEventListener("submit", handleIDSubmit);
 
 async function handleNameSubmit(event) {
   event.preventDefault();
-  submission = Object.fromEntries(new FormData(event.target));
+  const submission = Object.fromEntries(new FormData(event.target));
   const parentTaxon = await getTaxonByName(
     submission.taxonName,
     submission.kingdom
@@ -22,7 +22,7 @@ async function handleNameSubmit(event) {
 
 async function handleIDSubmit(event) {
   event.preventDefault();
-  submission = Object.fromEntries(new FormData(event.target));
+  const submission = Object.fromEntries(new FormData(event.target));
   let parentTaxon = await getTaxonByID(submission.taxonID);
   rootTaxon.id = parentTaxon.id;
   getSpeciesRecursively(parentTaxon);
@@ -129,7 +129,7 @@ async function getAllChildTaxa(parentTaxon) {
   let parentID = parentTaxon.id;
   let resultsJSON = await getPageOfChildTaxa(parentID, 1);
   let results = resultsJSON.results;
-  for (taxon of results) {
+  for (const taxon of results) {
     if (!taxon.extinct) {
       validTaxa.push(taxon);
     }
